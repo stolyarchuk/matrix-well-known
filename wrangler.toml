@@ -3,6 +3,8 @@ name = "matrix-well-known"
 main = "src/index.js"
 compatibility_date = "2024-10-22"
 compatibility_flags = ["nodejs_compat"]
+workers_dev = false
+route = "stolyarch.uk/.well-known/matrix/*"
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
@@ -23,9 +25,9 @@ mode = "smart"
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/workers/configuration/secrets/
 [vars]
-FEDERATION_SERVER = "federation.url:443"
+FEDERATION_SERVER = "im.stolyarch.uk:443"
 IDENTITY_SERVER_URL = "https://vector.im"
-HOMESERVER_URL = "https://homeserver.url"
+HOMESERVER_URL = "https://im.stolyarch.uk"
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#workers-ai
